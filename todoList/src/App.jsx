@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import Header from './component/Header'
+import TodoEditor from './component/TodoEditor'
 // p.290 ~
 function App() {
 
   return (
     <>
       <div className="App">
-        <div>Header</div>
-        <div>Todo Editor</div>
+        <Header />
+        <TodoEditor />
         <div>Todo List</div>
       </div>
     </>
