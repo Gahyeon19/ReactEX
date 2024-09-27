@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- button 클릭 예제 (html ver.) -->
+<body>
+  <p>0번 클릭했습니다.</p>
+  <button id="btn">CLICK</button>
+  
+  <script>
+    let counter = 0;
+    const button = document.querySelector("#btn");
+    const p = document.querySelector("p");
+    function handleClick() {
+      counter += 1;
+      p.innerText = `${counter} 번 클릭했습니다.`;
+    }
+
+    button.addEventListener("click", handleClick);
+
+  </script>
+</body>
+</html>
