@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Movie from "../src/components/Movie";
+import { change_title } from "../src/functions/change_title";
 
 const MovieHome = () => {
+  change_title("영화 정보 사이트");
+  
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 

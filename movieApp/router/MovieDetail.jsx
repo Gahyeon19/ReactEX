@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import Cast from "../src/components/Cast"
+import { change_title } from "../src/functions/change_title";
 import './MovieDetail.css'
 
 const MovieDetail = () => {
+
+
   let [movie, setMovie] = useState({});
   let { id } = useParams();
   console.log(id);
@@ -17,6 +20,9 @@ const MovieDetail = () => {
   useEffect(() => {
     getMovie();
   }, []);
+
+  
+  change_title(`${movie.title} 영화 상세 보기`);
 
   return (
     <>
